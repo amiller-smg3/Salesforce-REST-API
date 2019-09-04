@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "50a91690-0afe-4532-8ce1-e9547fee5d71",
+		"name": "Salesforce: The Best App Ever",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Token (Sandbox)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://test.salesforce.com/services/oauth2/token?grant_type=password&client_id=&client_secret=&username=amiller@smg3.com.dev&password=",
+					"protocol": "https",
+					"host": [
+						"test",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"oauth2",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "client_id",
+							"value": ""
+						},
+						{
+							"key": "client_secret",
+							"value": ""
+						},
+						{
+							"key": "username",
+							"value": "amiller@smg3.com.dev"
+						},
+						{
+							"key": "password",
+							"value": ""
+						}
+					]
+				},
+				"description": "Request an OAuth Token for future processing"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token (Production)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://login.salesforce.com/services/oauth2/token?grant_type=password&client_id=&client_secret=&username=amiller@smg3.com.dev&password=",
+					"protocol": "https",
+					"host": [
+						"login",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"oauth2",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "client_id",
+							"value": ""
+						},
+						{
+							"key": "client_secret",
+							"value": ""
+						},
+						{
+							"key": "username",
+							"value": "amiller@smg3.com.dev"
+						},
+						{
+							"key": "password",
+							"value": ""
+						}
+					]
+				},
+				"description": "Request an OAuth Token for future processing"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://smg3login--Dev.cs47.my.salesforce.com/services/data/v43.0/sobjects/Account/0012a00000ZR1YzAAL",
+					"protocol": "https",
+					"host": [
+						"smg3login--Dev",
+						"cs47",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v43.0",
+						"sobjects",
+						"Account",
+						"0012a00000ZR1YzAAL"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account Count Data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"contactCount\" : \"1\"\n}"
+				},
+				"url": {
+					"raw": "https://smg3login--Dev.cs47.my.salesforce.com/services/apexrest/AccountCountExample/",
+					"protocol": "https",
+					"host": [
+						"smg3login--Dev",
+						"cs47",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"apexrest",
+						"AccountCountExample",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
