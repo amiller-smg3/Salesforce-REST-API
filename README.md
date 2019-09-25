@@ -6,7 +6,7 @@ Simple REST API example of both client (Postman) and server side (Salesforce)
 
 # Blog Post
 
-Please visit [Salesforce REST API: Connected Apps & Apex REST Methods](https://www.google.com) blog post for a deeper explanation of this repo.
+Please visit [Salesforce REST API: Connected Apps & Apex REST Methods](https://chicagocloudgroup.com/salesforce-rest-api-connected-apps-apex-rest-methods/) blog post for a deeper explanation of this repo.
 
 Please feel free to fork and/or download this repo for your own uses.
 
